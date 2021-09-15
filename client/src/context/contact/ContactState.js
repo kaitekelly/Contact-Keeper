@@ -72,9 +72,16 @@ const ContactState = props => {
         dispatch({ type: UPDATE_CONTACT, payload: contact });
     };
     //Filter Contacts
-
+    const filterContacts = text => {
+        // contact.id = uuid.v4;
+        dispatch({ type: FILTER_CONTACTS, payload: text });
+    };
 
     //Clear Filter
+    const clearFilter = () => {
+        // contact.id = uuid.v4;
+        dispatch({ type: CLEAR_FILTER });
+    };
 
     return (
         <ContactContext.Provider
@@ -85,7 +92,9 @@ const ContactState = props => {
             deleteContact,
             setCurrent,
             clearCurrent,
-            updateContact
+            updateContact,
+            filterContacts,
+            clearFilter
         }}
         >
             {props.children}
