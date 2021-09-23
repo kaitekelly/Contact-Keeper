@@ -3,6 +3,7 @@ import { v4 as uuid } from 'uuid';
 import ContactContext from './contactContext';
 import contactReducer from './contactReducer';
 import {
+    // GET_CONTACTS,
     ADD_CONTACT,
     DELETE_CONTACT, 
     SET_CURRENT,
@@ -45,7 +46,7 @@ const ContactState = props => {
 
     //Add Contact
     const addContact = contact => {
-        contact.id = uuid.v4;
+        // contact.id = uuid.v4;
         dispatch({ type: ADD_CONTACT, payload: contact });
     };
 
