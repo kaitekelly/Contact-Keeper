@@ -50,7 +50,6 @@ export default(state, action) => {
                 filtered: null
             };
     
-    
         default:
             return state;
     }
